@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace jamsharp
 {
@@ -6,7 +7,8 @@ namespace jamsharp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var siteConfigSourcePath = args.Length >= 1 ? args[0] : Path.Combine(Directory.GetCurrentDirectory(), "jamstack.json");
+            Console.WriteLine(siteConfigSourcePath);
         }
     }
 }
